@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Palabras con letra</title>
+</head>
+<body>
+  <h1 id="titulo"></h1>
+  <ul id="lista-palabras"></ul>
+
+  <script src="palabras.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const letra = params.get("letra");
+    document.getElementById("titulo").textContent = `Palabras con la letra ${letra}`;
+
+    const palabras = diccionario[letra.toUpperCase()] || ["(Sin palabras disponibles)"];
+
+    const lista = document.getElementById("lista-palabras");
+    palabras.forEach(p => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = `significado.html?palabra=${p}`; 
+      a.textContent = p;
+      li.appendChild(a);
+      lista.appendChild(li);
+    });
+  </script>
+</body>
+</html>

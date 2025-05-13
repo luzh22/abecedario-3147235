@@ -1,0 +1,30 @@
+.abecedario ul {
+  list-style: none; /* Quitar los puntos de la lista */
+  display: flex; /* Mostrar los elementos en línea */
+  flex-wrap: wrap; /* Permitir que los elementos se ajusten a la siguiente línea */
+  gap: 10px; /* Espaciado entre los cuadritos */
+  padding: 0;
+}
+
+.abecedario li {
+  margin: 0;
+}
+
+.abecedario a {
+  display: inline-block;
+  width: 50px; /* Ancho del cuadrito */
+  height: 50px; /* Alto del cuadrito */
+  line-height: 50px; /* Centrar el texto verticalmente */
+  text-align: center; /* Centrar el texto horizontalmente */
+  background-color: #f1b3e7; /* Color de fondo del cuadrito */
+  border: 1px solid #ccc; /* Borde del cuadrito */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Quitar subrayado */
+  color: #333; /* Color del texto */
+  font-weight: bold; /* Texto en negrita */
+  transition: background-color 0.3s; /* Animación al pasar el mouse */
+}
+
+.abecedario a:hover {
+  background-color: #ddd; /* Cambiar color al pasar el mouse */
+}
